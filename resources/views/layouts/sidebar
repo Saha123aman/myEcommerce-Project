@@ -1,0 +1,59 @@
+<div class="sidebar">
+    <div class="account-user">
+        <span>Menu</span>
+       
+        <div>
+            @auth('custom')
+                <a href="{{ route('user.account') }}">
+                    <span class="icon">👤</span>
+                    <div class="username">
+                        {{ Auth::guard('custom')->user()->name }}
+                    </div>
+                </a>
+            @else
+                <a href="{{ route('user.login') }}">
+                    <span class="icon">👤</span> Sign In
+                </a>
+            @endauth
+        </div>
+    </div>
+
+    <ul class="sidebar-menu">
+        <li class="product">
+            <a href="#" class="product-btn">Product</a>
+            <ul class="product-options">
+                <li class="men">
+                    <a href="#" class="men-btn">Men</a>
+                    <ul class="men-options">
+                        <li><a href="#">Shirts</a></li>
+                        <li><a href="#">Pants</a></li>
+                        <li><a href="#">Shoes</a></li>
+                    </ul>
+                </li>
+                <li class="women">
+                    <a href="#" class="women-btn">Women</a>
+                    <ul class="women-options">
+                        <li><a href="#">Dresses</a></li>
+                        <li><a href="#">Tops</a></li>
+                        <li><a href="#">Shoes</a></li>
+                    </ul>
+                </li>
+                <li class="kids">
+                    <a href="#" class="kids-btn">Kids</a>
+                    <ul class="kids-options">
+                        <li><a href="#">Toys</a></li>
+                        <li><a href="#">Clothing</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <div class="sidebar-menu">
+            <a href="{{ route('front.cart') }}" class="nav-item" style="position: relative;">
+                <span class="icon mx-4">🛒</span>
+                <span class="cart-badge mx-4" id="cart-count">{{ $cartCount }}</span>
+            </a>
+        </div>
+    </div>
+</div>

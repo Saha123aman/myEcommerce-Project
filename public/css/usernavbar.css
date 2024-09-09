@@ -1,0 +1,395 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.account-user{
+    background-color: #007bff;
+    color:white;
+    height:100px;
+}
+.account-user .username{
+    color:white;
+   }
+
+/* Styles for the navigation menu */
+.nav-menu {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu > li {
+    display: inline-block;
+    position: relative;
+    margin: 0; /* Ensures no extra space around the menu item */
+}
+
+.nav-menu > li > a {
+    text-decoration: none;
+    color: #000; /* Adjust color as needed */
+    padding: 5px 10px; /* Reduce padding to control space */
+    display: block;
+    line-height: 1; /* Adjusts the height of the line to remove extra space */
+}
+
+/* Styles for the dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff; /* Adjust background color as needed */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000; /* Ensures the dropdown appears above other content */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Adds shadow for better visibility */
+    max-height: 300px; /* Fixed height for dropdown menu */
+    overflow-y: auto; /* Enables vertical scrolling if content overflows */
+}
+
+.dropdown-menu li {
+    padding: 5px 10px; /* Reduce padding inside dropdown items */
+    margin: 0; /* Ensure no extra margin */
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #000; /* Adjust color as needed */
+    display: block;
+    padding: 10px 20px; /* Ensures clickable area */
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f1f1f1; /* Adjust hover background color as needed */
+}
+
+/* Show the dropdown menu on hover */
+.nav-menu > li:hover .dropdown-menu {
+    display: block;
+}
+
+/* Custom styles for SweetAlert2 */
+.custom-alert-1 {
+    width: 200px;
+    height: 200px;
+}
+
+.custom-alert-1 .swal2-popup {
+    width: 20px; /* Adjust width as needed */
+    font-size: 0.5rem; /* Adjust font size if needed */
+}
+
+.custom-alert-1 .swal2-title {
+    font-size: 1rem; /* Adjust title font size */
+}
+
+.custom-alert-1 .swal2-content {
+    font-size: 0.4rem; /* Adjust content font size */
+}
+
+.custom-alert-1 .swal2-actions {
+    padding: 10px; /* Adjust padding for actions (buttons) */
+}
+
+.custom-alert-1 .swal2-confirm {
+    background-color: #007bff; /* Customize confirm button color */
+    border-color: #007bff; /* Customize border color */
+}
+
+.custom-alert-1 .swal2-confirm:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
+.custom-alert-1 .swal2-cancel {
+    background-color: #6c757d; /* Customize cancel button color */
+    border-color: #6c757d; /* Customize border color */
+}
+
+.custom-alert-1 .swal2-cancel:hover {
+    background-color: #5a6268; /* Darker color on hover */
+}
+
+/* Custom styles for the second alert */
+.custom-alert-2 .swal2-popup {
+    width: 100px !important; /* Adjust width as needed */
+    font-size: 1rem; /* Adjust font size if needed */
+}
+
+.custom-alert-2 .swal2-title {
+    font-size: 1.2rem; /* Adjust title font size */
+}
+
+.custom-alert-2 .swal2-content {
+    font-size: 1rem; /* Adjust content font size */
+}
+
+.custom-alert-2 .swal2-actions {
+    padding: 15px; /* Adjust padding for actions (buttons) */
+}
+
+header {
+    background-color: #0071dc;
+    color: #fff;
+}
+
+.categories li {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.categories li:hover {
+    background-color: #f0f0f0;
+    color: #0071dc;
+}
+
+#result li {
+    color: black;
+    list-style-type: none;
+    padding: 10px;
+    border-bottom: 1px solid #e6e6e6;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#result li:hover {
+    background-color: #f0f0f0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    margin: 0 20px;
+    max-width: 600px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 10px;
+    border: none;
+    background-color: #555;
+    color: #fff;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer; 
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a:hover {
+    color: #ffc220;
+}
+
+.nav-item {
+    color: #fff;
+}
+
+.cart-badge {
+    background: #ffc220;
+    color: #000;
+    border-radius: 50%;
+    padding: 0 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: -10px;
+}
+
+.categories {
+    font-family: Arial, sans-serif;
+    color: #333;
+    font-weight: bold;
+    background-color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.categories li a {
+    text-decoration: none;
+}
+
+.categories a {
+    color: #000;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+
+
+
+/*  */
+
+/* .sidebar-menu a {
+    display: block;
+    padding: 10px 0;
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #e6e6e6;
+} */
+.hamburger-menu {
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Transition for the rotation effect */
+}
+
+/* Rotate the hamburger menu when active */
+.hamburger-menu.active {
+    transform: rotate(90deg); /* Rotate 90 degrees */
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 280px;
+    height: 100%;
+    background-color: #e1e8ed;
+    transition: left 0.3s ease-in-out;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+/* Close button styles */
+.sidebar .sidebar-close {
+    font-size: 28px;
+    cursor: pointer;
+    color: #fff;
+    float: right;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Rotate the close button when the sidebar is active */
+.sidebar.active .sidebar-close {
+    transform: rotate(90deg);
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.logout-btn {
+    background-color: #ff4136;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.logout-btn:hover {
+    background-color: #ff1a1a;
+}
+
+/* Success message styles */
+.alert-success {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1001;
+    animation: slideIn 0.5s, fadeOut 0.5s 4.5s forwards;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+
+@keyframes slideIn {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+
+    to {
+        top: 20px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    .categories {
+        display: none;
+    }
+.nav-links  .nav-item{
+        display: none;
+    } 
+    .nav-links #cart{
+       display: flex;
+     
+    }
+/* 
+    .logout-btn {
+        display: none;
+    } */
+.logout-btn{
+    width: 50px;
+}
+    .custom-alert-1 .swal2-popup {
+        width: 150px !important; /* Adjust width for smaller screens */
+    }
+}
+

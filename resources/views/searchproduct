@@ -1,0 +1,293 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List - My eCommerce Store</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Custom CSS */
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .hero-section {
+            background: url('{{ asset('images/backgroundimage.png') }}') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .filters-section {
+            background-color: #f0f0f0;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .filters-section h5 {
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .filters-section .form-group label {
+            font-weight: 500;
+        }
+
+        .filters-section .btn {
+            width: 100%;
+        }
+
+        .product-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card .card-body {
+            padding: 20px;
+        }
+
+        .product-card .card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .product-card .card-text {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .pagination {
+            justify-content: center;
+        }
+
+        .dropdown-menu {
+            padding: 15px;
+            width: 100%;
+            max-width: 100%; /* Ensure dropdown doesn't exceed screen width */
+        }
+
+        .dropdown-item {
+            padding: 5px 0;
+        }
+
+        .card-body .mobilebtn {
+            display: none; /* Hide mobile buttons by default */
+        }
+
+        /* Hide Filters Section on Mobile Screens */
+        @media (max-width: 767.98px) {
+            .filters-section {
+                display: none;
+            }
+
+            .filters-mobile {
+                display: block;
+                margin-bottom: 10px; /* Reduced margin-bottom */
+                padding: 15px; /* Reduced padding */
+            }
+
+            .filters-mobile .form-group {
+                margin-bottom: 10px; /* Reduced bottom margin */
+            }
+
+            .filters-mobile .form-control {
+                width: 100%; /* Full width for form controls */
+                max-width: 100%; /* Ensure controls don't exceed screen width */
+            }
+
+            .filters-mobile .form-control option {
+                /* Adjust the width of options for mobile */
+                width: 100%;
+            }
+
+            /* Flex layout for dropdowns */
+            .filters-mobile .row {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .filters-mobile .form-group {
+                flex: 1;
+                margin-right: 10px;
+            }
+
+            .filters-mobile .form-group:last-child {
+                margin-right: 0;
+            }
+
+            /* Make buttons smaller on mobile */
+            .product-card .btn {
+                font-size: 0.7rem; /* Smaller font size for mobile */
+                padding: 3px 8px; /* Smaller padding for mobile */
+            }
+
+            /* Hide desktop buttons on mobile */
+            .desktopbtn {
+                display: none; /* Hidden on mobile screens */
+            }
+
+            /* Show mobile buttons */
+            .mobilebtn {
+                display: flex; /* Show on mobile screens */
+            }
+        }
+
+        /* Only display dropdowns on mobile */
+        @media (min-width: 768px) {
+            .filters-mobile {
+                display: none;
+            }
+
+            .mobilebtn {
+                display: none; /* Hidden on larger screens */
+            }
+
+            .desktopbtn {
+                display: flex; /* Show on medium and larger screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    @include('layouts.navbar')
+
+    <!-- Mobile Filters Section -->
+    {{-- <section class="filters-mobile d-md-none py-3">
+        <div class="container">
+            <form>
+                <div class="row">
+                    <!-- Categories -->
+                    <div class="form-group col-12">
+                        <select class="form-control" id="category">
+                            <option>All Categories</option>
+                            <option>Men</option>
+                            <option>Women</option>
+                            <!-- Add more categories as needed -->
+                        </select>
+                    </div>
+                    <div class="form-group col-12">
+                        <select class="form-control" id="rating">
+                            <option>All Ratings</option>
+                            <option>4 stars & up</option>
+                            <option>3 stars & up</option>
+                            <option>2 stars & up</option>
+                            <option>1 star & up</option>
+                        </select>
+                    </div>
+                    <!-- Price Range -->
+                    <div class="form-group col-12">
+                        <select class="form-control" id="priceRangeDropdown">
+                            <option>select price range</option>
+                            <option>Rs 199 and below</option>
+                            <option>Rs 200 - Rs 299</option>
+                            <option>Rs 300 and Rs 499</option>
+                            <option>Rs 500 and Rs 699</option>
+                            <option>Rs 700 and above</option>
+                            <option>Rs 1000 and above</option>
+                        </select>
+                    </div>
+                    <!-- Rating -->
+                  
+                </div>
+            </form>
+        </div>
+    </section> --}}
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Our Products</h1>
+            <p>Explore our exclusive collection of clothing and accessories.</p>
+            {{-- <h1>{{$productcount}}</h1> --}}
+        </div>
+    </section>
+
+    <!-- Filters and Product List Section -->
+     @include('layouts.filter') 
+
+
+     <div class="col-md-9" id="product-list">
+        @if(isset($error))
+         <div class="alert alert-warning">{{$error}}</div>
+        @else
+        
+        <div class="row product-list-mobile">
+            @foreach ($products as $product)
+                <div class="col-md-4 col-6 mb-4">
+                    <div class="card product-card">
+                        <img src="{{ asset('productimages/' . $product->image_url ?? 'default-profile.png') }}"
+                            alt="Product Image" class="img-fluid product-img" style="max-height: 200px;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $product->name }}</h5>
+                            <p class="card-text">Rs: {{ $product->price }}</p>
+                            <!-- Desktop Buttons -->
+                            <div class="d-none d-md-flex justify-content-between desktopbtn">
+                                <a href="{{ route('front.details', ['id' => $product->id]) }}"
+                                    class="btn btn-outline-success btn-sm">View Details</a>
+
+                                <a href="#" class="btn btn-success btn-sm">Add to Cart</a>
+                            </div>
+                            <!-- Mobile Buttons -->
+                            <div class="d-md-none d-flex justify-content-between mobilebtn ">
+                                <a href="{{ route('front.details', ['id' => $product->id]) }}"
+                                    class="btn btn-outline-success btn-sm"> Details</a>
+
+                                <a href="#" class="btn btn-success btn-sm"> cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+        <!-- Pagination -->
+        {{-- <nav>
+        <ul class="pagination">
+            {{ $products->links() }}
+        </ul>
+    </nav> --}}
+
+    @endif
+    </div>
+    </div>
+    </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-light py-4">
+        @include('layouts.userfooter')
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    {{-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script> --}}
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .section {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            width: 220px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 1.5em;
+            margin: 0 0 10px;
+        }
+
+        .section p {
+            color: #777;
+            font-size: 0.9em;
+            margin: 0 0 10px;
+        }
+
+        .section a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        .section a:hover {
+            background-color: #218838;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .image-grid img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="section">
+            <h2>T-shirts</h2>
+            <div class="image-grid">
+                <img src="tshirt1.jpg" alt="T-shirt 1">
+                <img src="tshirt2.jpg" alt="T-shirt 2">
+                <img src="tshirt3.jpg" alt="T-shirt 3">
+                <img src="tshirt4.jpg" alt="T-shirt 4">
+            </div>
+            <p>Explore our range of stylish T-shirts.</p>
+            <a href="#">Shop Now</a>
+        </div>
+        <div class="section">
+            <h2>Shirts</h2>
+            <div class="image-grid">
+                <img src="shirt1.jpg" alt="Shirt 1">
+                <img src="shirt2.jpg" alt="Shirt 2">
+                <img src="shirt3.jpg" alt="Shirt 3">
+                <img src="shirt4.jpg" alt="Shirt 4">
+            </div>
+            <p>Discover our collection of formal and casual shirts.</p>
+            <a href="#">Shop Now</a>
+        </div>
+        <div class="section">
+            <h2>Glasses</h2>
+            <div class="image-grid">
+                <img src="glasses1.jpg" alt="Glasses 1">
+                <img src="glasses2.jpg" alt="Glasses 2">
+                <img src="glasses3.jpg" alt="Glasses 3">
+                <img src="glasses4.jpg" alt="Glasses 4">
+            </div>
+            <p>Find the perfect pair of glasses for any occasion.</p>
+            <a href="#">Shop Now</a>
+        </div>
+        <div class="section">
+            <h2>Watches</h2>
+            <div class="image-grid">
+                <img src="watch1.jpg" alt="Watch 1">
+                <img src="watch2.jpg" alt="Watch 2">
+                <img src="watch3.jpg" alt="Watch 3">
+                <img src="watch4.jpg" alt="Watch 4">
+            </div>
+            <p>Browse our selection of stylish watches.</p>
+            <a href="#">Shop Now</a>
+        </div>
+    </div>
+</body>
+</html>

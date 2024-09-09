@@ -1,0 +1,34 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.logo a {
+    font-family: 'Pacifico', cursive;
+}
+
+header {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.cart-item img {
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.order-summary {
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.order-summary h4, .order-summary div {
+    margin-bottom: 10px;
+}
+
+.order-summary .btn {
+    border-radius: 0;
+}

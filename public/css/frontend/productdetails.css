@@ -1,0 +1,335 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+}
+
+.small-swal-popup {
+    width: 600px !important;
+    /* Adjust the width */
+    padding: 15px !important;
+    /* Adjust the padding */
+    font-size: 14px !important;
+    /* Adjust the font size */
+}
+
+/*
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+} */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+input[type="text"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.nav-links a,
+.user-cart a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.product-details {
+    display: flex;
+    margin: 20px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    /* Allow wrapping for smaller screens */
+}
+
+.image-gallery {
+    flex: 1 1 100px;
+    /* Flexible width for the image container */
+    margin-right: 20px;
+    /* Space between the image and product info */
+    max-width: 100%;
+    /* Ensure image container scales down properly */
+}
+
+#main-image {
+    width: 318px;
+    height: 318px;
+    border-radius: 8px;
+}
+
+.similarimage {
+    width: 100%;
+    /* Make sure images fill their container */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 8px;
+}
+
+.thumbnail-carousel {
+    display: flex;
+    margin-top: 10px;
+}
+
+.thumbnail-carousel img {
+    width: 80px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.product-info {
+    flex: 1 1 600px;
+    /* Flexible width for the product info */
+}
+
+.product-info h1 {
+    font-size: 28px;
+}
+
+.price {
+    font-size: 24px;
+    color: #e74c3c;
+}
+
+.size-selector,
+.color-options,
+.quantity-selector {
+    margin-top: 10px;
+}
+
+.add-to-cart {
+    margin-top: 20px;
+    background-color: #ff8800;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.buy-now {
+    margin-top: 20px;
+    background-color: #ff5900;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* .add-to-cart:hover {
+ 
+    background-color: #5e3d39;
+   
+}
+.buy-now:hover{
+   
+    background-color: #132a11;
+
+} */
+.cart-icon {
+    font-size: 15px;
+    color: #ece4e4;
+    padding: 4px;
+}
+
+
+.product-description,
+.customer-reviews,
+.related-products {
+    margin: 20px;
+}
+
+.product-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    /* Prevent wrapping */
+    overflow-x: auto;
+    /* Allow horizontal scrolling */
+    padding: 10px 0;
+    /* Padding to prevent content from sticking to edges */
+}
+
+.product-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    flex: 0 0 auto;
+    /* Prevent items from shrinking and ensure they maintain their size */
+    width: 200px;
+    /* Set a fixed width for product items */
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
+}
+
+.product-item img {
+    width: 100%;
+    /* Ensure images fill their container */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 4px;
+}
+
+.product-actions {
+    display: none;
+    /* Hide by default */
+}
+
+@media (min-width: 768px) {
+    .product-actions {
+        display: flex;
+        /* Show on medium screens and above */
+        justify-content: space-between;
+    }
+
+    .small-swal-popup {
+        width: 300px !important;
+        /* Adjust the width */
+        padding: 15px !important;
+        /* Adjust the padding */
+        font-size: 14px !important;
+        /* Adjust the font size */
+    }
+}
+
+@media (max-width: 767px) {
+    .product-actions {
+        display: flex;
+        /* Show on smaller screens */
+        justify-content: space-between;
+    }
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        /* Hide nav links on small screens */
+    }
+
+    input[type="text"] {
+        max-width: 100%;
+    }
+
+    .product-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-gallery {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .product-info {
+        text-align: center;
+    }
+
+    .product-item {
+        width: 150px;
+        /* Adjust width for mobile screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-info h1 {
+        font-size: 24px;
+    }
+
+    .price {
+        font-size: 20px;
+    }
+
+    .add-to-cart {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    .product-item {
+        width: 120px;
+        /* Adjust width for smaller mobile screens */
+    }
+
+    /* Related products in two columns with two items each */
+    .related-products .product-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* Two columns */
+        grid-gap: 10px;
+    }
+
+    .product-item {
+        width: 100%;
+        /* Full width in the grid */
+        box-sizing: border-box;
+    }
+
+    .product-description,
+    .customer-reviews,
+    .related-products {
+        margin: 10px;
+        /* Reduce margin for mobile screens */
+    }
+}
+
+/* Pagination styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.pagination .page-link {
+    color: #333;
+    text-decoration: none;
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.pagination .page-link:hover {
+    background-color: #f0f0f0;
+}
+
+.pagination .page-link[aria-label="Previous"]::before,
+.pagination .page-link[aria-label="Next"]::before {
+    content: '';
+    /* Remove arrow symbols */
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #ccc;
+    pointer-events: none;
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eCommerce Clothing Store</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 30px;
+            flex-wrap: wrap;
+        }
+
+        .logo a {
+            color: #fff;
+            font-size: 2rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links ul li {
+            margin-left: 20px;
+            position: relative; /* Required for badge positioning */
+        }
+
+        .nav-links ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .icon {
+            font-size: 1.5rem;
+        }
+
+        .icon.cart {
+            font-size: 1.8rem;
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -5px;
+            right: -10px;
+            background: red;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            margin: 0 20px;
+            max-width: 600px;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+
+        .search-bar button {
+            padding: 10px;
+            border: none;
+            background-color: #555;
+            color: #fff;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            height: 3px;
+            background: #fff;
+            margin: 4px 0;
+            width: 25px;
+            border-radius: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: #333;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links ul li {
+                margin: 15px 0;
+            }
+
+            .search-bar {
+                order: 2;
+                width: 100%;
+                margin: 10px 0;
+                max-width: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">BrandName</a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products...">
+                <button><i class="icon-search">🔍</i></button>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <ul>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#" class="icon wishlist">❤</a></li>
+                    <li><a href="#" class="icon user">👤</a></li>
+                    <li>
+                        <a href="#" class="icon cart">🛒</a>
+                        <span class="cart-badge" id="cart-count">3</span> <!-- Example count -->
+                    </li>
+                </ul>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('nav-links');
+        
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+
+            // Example: Update cart count dynamically
+            function updateCartCount(count) {
+                document.getElementById('cart-count').textContent = count;
+            }
+
+            // Call updateCartCount with the actual number of items in the cart
+            updateCartCount(5); // Replace with your cart logic
+        });
+    </script>
+</body>
+</html>

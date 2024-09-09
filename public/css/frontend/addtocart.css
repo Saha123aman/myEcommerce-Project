@@ -1,0 +1,137 @@
+
+/* CSS for hover effect */
+#imageclick {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 100%; /* Makes image responsive */
+    height: auto; /* Maintains aspect ratio */
+}
+
+#imageclick:hover {
+    transform: scale(1.05); /* Slightly enlarges the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds shadow effect */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    #imageclick {
+        width: 80%; /* Makes the image smaller on tablets and smaller screens */
+        max-width: 200px; /* Ensures image does not get too large */
+    }
+
+    .card-title {
+        font-size: 1.25rem; /* Reduces title font size */
+    }
+
+    .product-price,
+    .item-total {
+        font-size: 1rem; /* Reduces font size of price */
+    }
+
+    .quantity-input {
+        width: 60px; /* Adjusts the width of quantity input */
+    }
+
+    .quantity-btn {
+        font-size: 0.8rem; /* Reduces button font size */
+    }
+
+    .btn {
+        font-size: 0.9rem; /* Reduces button font size */
+        padding: 0.5rem 1rem; /* Adjusts padding for better fit */
+    }
+
+    .form-control {
+        font-size: 0.9rem; /* Reduces font size of input fields */
+        padding: 0.5rem; /* Adjusts padding for better fit */
+    }
+}
+
+@media (max-width: 576px) {
+    #imageclick {
+        width: 70%; /* Makes the image even smaller on mobile screens */
+        max-width: 150px; /* Ensures image does not get too large */
+    }
+
+    .card-title {
+        font-size: 1rem; /* Further reduces title font size */
+    }
+
+    .product-price,
+    .item-total {
+        font-size: 0.9rem; /* Further reduces font size of price */
+    }
+
+    .quantity-input {
+        width: 50px; /* Further adjusts the width of quantity input */
+    }
+
+    .quantity-btn {
+        font-size: 0.7rem; /* Further reduces button font size */
+    }
+
+    .btn {
+        font-size: 0.8rem; /* Further reduces button font size */
+        padding: 0.4rem 0.8rem; /* Adjusts padding for better fit */
+    }
+
+    .form-control {
+        font-size: 0.8rem; /* Further reduces font size of input fields */
+        padding: 0.4rem; /* Adjusts padding for better fit */
+    }
+}
+/* Responsive adjustments for the input group */
+@media (max-width: 768px) {
+.input-group-sm {
+font-size: 0.8rem; /* Reduces font size for better fit */
+}
+
+.quantity-btn {
+padding: 0.25rem 0.5rem; /* Adjusts padding for smaller buttons */
+font-size: 0.75rem; /* Reduces button font size */
+}
+
+.quantity-input {
+width: 60px; /* Adjusts width of the quantity input */
+font-size: 0.8rem; /* Reduces font size of the input */
+}
+}
+
+@media (max-width: 576px) {
+.input-group-sm {
+font-size: 0.7rem; /* Further reduces font size */
+}
+
+.quantity-btn {
+padding: 0.2rem 0.4rem; /* Further adjusts padding */
+font-size: 0.7rem; /* Further reduces button font size */
+}
+
+.quantity-input {
+width: 50px; /* Further adjusts width of the quantity input */
+font-size: 0.7rem; /* Further reduces font size of the input */
+}
+}
+@media (max-width: 768px) {
+.col-md-4 {
+text-align: center; /* Center-aligns content within the column */
+}
+
+#imageclick {
+width: 80%; /* Makes the image smaller on tablets and smaller screens */
+max-width: 200px; /* Ensures image does not get too large */
+margin: 0 auto; /* Centers image horizontally */
+}
+}
+
+@media (max-width: 576px) {
+.col-md-4 {
+text-align: center; /* Center-aligns content within the column */
+}
+
+#imageclick {
+width: 70%; /* Makes the image even smaller on mobile screens */
+max-width: 150px; /* Ensures image does not get too large */
+margin: 0 auto; /* Centers image horizontally */
+}
+}

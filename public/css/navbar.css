@@ -1,0 +1,210 @@
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+
+        header {
+            background-color: #0071dc;
+            color: #fff;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        .logo a {
+            color: #fff;
+            font-size: 2rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            margin: 0 20px;
+            max-width: 600px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 20px 0 0 20px;
+            outline: none;
+        }
+
+        .search-bar button {
+            padding: 10px;
+            border: none;
+            background-color: #555;
+            color: #fff;
+            border-radius:  0 20px 20px 0;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a:hover {
+            color: #ffc220;
+        }
+
+        .nav-item {
+            color: #fff;
+        }
+
+        .cart-badge {
+            background: #ffc220;
+            color: #000;
+            border-radius: 50%;
+            padding: 0 5px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            position: absolute;
+            top: 0;
+            right: -10px;
+        }
+
+        .categories {
+            background-color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        .categories a {
+            color: #000;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #fff;
+            transition: left 0.3s ease-in-out;
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .sidebar.active {
+            left: 0;
+        }
+
+        .sidebar-header {
+            background-color: #0071dc;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sidebar-close {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .sidebar-menu {
+            padding: 20px;
+        }
+
+        .sidebar-menu a {
+            display: block;
+            padding: 10px 0;
+            color: #000;
+            text-decoration: none;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        .hamburger-menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .logout-btn {
+            background-color: #ff4136;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        .logout-btn:hover {
+            background-color: #ff1a1a;
+        }
+
+        /* Success message styles */
+        .alert-success {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1001;
+            animation: slideIn 0.5s, fadeOut 0.5s 4.5s forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                top: 0;
+                opacity: 0;
+            }
+            to {
+                top: 20px;
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: block;
+            }
+
+            .categories {
+                display: none;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .logout-btn {
+                display: none;
+            }
+        }
+    

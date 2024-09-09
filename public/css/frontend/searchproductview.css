@@ -1,0 +1,191 @@
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.product-rating {
+    margin: 5px 0;
+    color: #f39c12;
+}
+
+.product-rating i {
+    margin-right: 2px;
+}
+
+/* Adjusting button size and adding gap */
+.desktopbtn .btn, .mobilebtn .btn {
+    padding: 5px 10px; /* Smaller padding for smaller buttons */
+    font-size: 0.85rem; /* Slightly smaller font size */
+}
+
+.desktopbtn {
+    gap: 10px; /* Adding gap between buttons in desktop view */
+}
+
+.mobilebtn {
+    gap: 8px; /* Adding gap between buttons in mobile view */
+}
+
+/* If gap is not supported, use margin */
+.desktopbtn .btn, .mobilebtn .btn {
+    margin-right: 10px;
+    font-size: 0.6em;
+}
+
+.desktopbtn .btn:last-child, .mobilebtn .btn:last-child {
+    margin-right: 0; /* Removing margin from the last button */
+}
+/* 
+.hero-section {
+    background: url('{{ asset('images/backgroundimage.png') }}') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+} */
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.filters-section {
+    background-color: #f0f0f0;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.filters-section h5 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.filters-section .form-group label {
+    font-weight: 500;
+}
+
+.filters-section .btn {
+    width: 100%;
+}
+
+.product-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.product-card .card-body {
+    padding: 20px;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-card .card-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.product-card .card-text {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.pagination {
+    justify-content: center;
+}
+
+.filters-mobile, .desktopbtn, .mobilebtn {
+    width: 100%;
+}
+
+/* Hide Filters Section on Mobile Screens */
+@media (max-width: 767.98px) {
+    .filters-section {
+        display: none;
+    }
+
+    .filters-mobile {
+        display: block;
+        margin-bottom: 10px;
+        padding: 15px;
+    }
+
+    .filters-mobile .form-group {
+        margin-bottom: 10px;
+    }
+
+    .filters-mobile .form-control {
+        width: 100%;
+        max-width: 100%;
+    }
+    .product-card h6 {
+font-size: 10px;
+/* Smaller font size for availability */
+}
+    /* Adjust product card size on mobile screens */
+    .product-card {
+        margin-bottom: 20px; /* Reduce bottom margin */
+        width: 100%; /* Full width of the container */
+    }
+
+    .product-card .card-body {
+        padding: 15px; /* Reduce padding */
+    }
+
+    .product-card .card-title {
+        font-size: 0.8rem; /* Smaller font size for title */
+    }
+
+    .product-card .card-text {
+        font-size: 0.9rem; /* Smaller font size for text */
+    }
+}
+
+@media (min-width: 768px) {
+    .filters-mobile {
+        display: none;
+    }
+
+    .mobilebtn {
+        display: none;
+    }
+
+    .desktopbtn {
+        display: flex;
+    }
+}
+@media (max-width: 767.98px) {
+.hero-section {
+background-size: contain; /* Make the image smaller and fully visible */
+padding: 50px 0; /* Reduce the padding for mobile */
+}
+
+.hero-section h1 {
+font-size: 2rem; /* Adjust the font size */
+}
+
+.hero-section p {
+font-size: 1rem; /* Adjust the font size */
+margin-bottom: 20px; /* Adjust the margin */
+}
+}

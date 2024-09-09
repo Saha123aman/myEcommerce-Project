@@ -1,0 +1,261 @@
+body {
+    background-color: #f8f9fa; /* Light gray background */
+    color: #333;
+    width: auto; /* Dark text color */
+  }
+  .banner {
+    background-color: orange;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.category {
+    background-color: orange;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    flex: 1;
+    margin: 0 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.category img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.category .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.category .offer {
+    font-size: 1rem;
+    margin-top: 5px;
+}
+.card {
+border: none;
+transition: transform 0.2s;
+}
+
+.card:hover {
+transform: scale(1.05);
+}
+.category:hover{
+
+        transform: scale(1.05);
+        
+}
+
+.card-title {
+font-size: 16px;
+font-weight: bold;
+margin-bottom: 5px;
+}
+
+.card-text {
+font-size: 14px;
+color: #555;
+}
+.banner {
+    background-color: orange;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+  .jumbotron {
+    background-color: #343a40; /* Dark background for jumbotron */
+    color: #fff; /* White text color */
+    margin-bottom: 0; /* Remove bottom margin */
+    padding: 80px 20px; /* Padding for top and bottom */
+    text-align: center; /* Center align text */
+  }
+
+  .jumbotron h1 {
+    font-size: 3rem; /* Larger font size for heading */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 2px; /* Letter spacing for emphasis */
+    margin-bottom: 20px; /* Bottom margin for spacing */
+    font-family: 'Arial', sans-serif; /* Example: Change font family */
+    color: #ffc107; /* Example: Change text color */
+  }
+
+  .jumbotron p {
+    font-size: 1.5rem; /* Larger font size for paragraph */
+    font-weight: 300; /* Lighter font weight */
+    margin-bottom: 30px; /* Bottom margin for spacing */
+    font-style: italic; /* Example: Italicize text */
+  }
+
+  .jumbotron .btn-dark {
+    background-color: #007bff; /* Primary button color */
+    border-color: #007bff; /* Primary button border color */
+    font-size: 1.2rem; /* Font size for button */
+    padding: 12px 30px; /* Padding for button */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 1px; /* Letter spacing for emphasis */
+  }
+
+  .jumbotron .btn-dark:hover {
+    background-color: #0056b3; /* Darken button on hover */
+    border-color: #0056b3; /* Darken border on hover */
+  }
+
+  .carousel-item img {
+    width: 100%; /* Make carousel images responsive */
+    height: 400px; /* Fixed height */
+    object-fit: cover; /* Maintain aspect ratio and cover */
+  }
+
+  .card {
+    margin-bottom: 20px; /* Add bottom margin to cards */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+  }
+
+  .card-title {
+    font-size: 1.2rem; /* Larger font size for card title */
+  }
+
+  .card-text {
+    color: #555; /* Dark gray text color */
+  }
+
+  .btn-primary {
+    background-color: #007bff; /* Primary button color */
+    border-color: #007bff; /* Primary button border color */
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3; /* Darken button on hover */
+    border-color: #0056b3; /* Darken border on hover */
+  }
+  .hero-section {
+          background-color: #85909c;
+          color: white;
+          padding: 60px 20px;
+          text-align: center;
+      }
+
+      .hero-section h1 {
+          font-size: 3rem;
+          font-weight: 700;
+          margin-bottom: 20px;
+      }
+
+      .hero-section p {
+          font-size: 1.25rem;
+          margin-bottom: 30px;
+      }
+
+      .hero-section .btn-primary {
+          background-color: #9bd93f;
+          /* border-color: #ffc107; */
+          color: #fafbfd;
+          font-size: 1.1rem;
+          padding: 12px 30px;
+      }
+
+      .hero-section .btn-primary:hover {
+          background-color: #e0a800;
+          border-color: #e0a800;
+      }
+
+      .featured-products {
+          padding: 40px 20px;
+      }
+
+      .featured-products h2 {
+          text-align: center;
+          margin-bottom: 40px;
+          font-size: 2rem;
+          color: #007bff;
+      }
+
+      .product-card {
+          border: 1px solid #ddd;
+          border-radius: 10px;
+          overflow: hidden;
+          transition: transform 0.3s;
+      }
+
+      .product-card:hover {
+          transform: scale(1.03);
+      }
+
+      .product-card img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+      }
+
+      .product-card-body {
+          padding: 20px;
+          text-align: center;
+      }
+
+      .product-card-body h5 {
+          margin-bottom: 10px;
+          font-size: 1.25rem;
+      }
+
+      .product-card-body p {
+          color: #666;
+      }
+
+      .product-card-body .btn {
+          background-color: #007bff;
+          border-color: #007bff;
+          color: white;
+          font-size: 1rem;
+          padding: 10px 20px;
+      }
+
+      .product-card-body .btn:hover {
+          background-color: #0056b3;
+          border-color: #0056b3;
+      }
+
+      .cta-section {
+          background-color: #f1f1f1;
+          padding: 60px 20px;
+          text-align: center;
+      }
+
+      .cta-section h2 {
+          font-size: 2rem;
+          margin-bottom: 20px;
+      }
+
+      .cta-section p {
+          font-size: 1.25rem;
+          margin-bottom: 30px;
+      }
+
+      .cta-section .btn {
+          background-color: #007bff;
+          border-color: #007bff;
+          color: white;
+          font-size: 1.1rem;
+          padding: 12px 30px;
+      }
+
+      .cta-section .btn:hover {
+          background-color: #0056b3;
+          border-color: #0056b3;
+      }
